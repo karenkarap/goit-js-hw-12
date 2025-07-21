@@ -1,0 +1,152 @@
+@import url('izitoast/dist/css/iziToast.min.css');
+@import url('simplelightbox/dist/simple-lightbox.min.css');
+
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+
+form {
+  width: 371px;
+  height: 40px;
+  margin: 36px auto;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.form input {
+  width: 236px;
+  padding: 8px 16px;
+  height: 20px;
+  border-radius: 8px;
+  
+}
+
+.form input:hover {
+  border-color: #000000;
+}
+
+
+.form button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #4e75ff;
+
+  font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+.form button:hover {
+  background: #6c8cff;
+}
+
+/* gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.gallery-item {
+  flex: 0 1 calc(33.333% - 32px);
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* важно! картинка сверху, инфо снизу */
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-link {
+  display: block;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  padding: 10px 12px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.info-row p {
+  flex: 1;
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.info-row.labels p {
+  font-weight: bold;
+  color: #555;
+}
+
+.info-row.values p {
+  color: #222;
+}
+
+/* modal */
+/* Скруглённые углы */
+.sl-wrapper .sl-image img {
+  border-radius: 12px;
+}
+
+/* Тень */
+.sl-wrapper .sl-image img {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.sl-overlay {
+  background: rgba(0, 0, 0, 0.85);
+  /* затемнение фона */
+}
+
+
+/* loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #4e75ff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader.is-hidden {
+  display: none;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
