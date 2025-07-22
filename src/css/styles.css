@@ -58,6 +58,7 @@ form {
 .gallery-item {
   flex: 0 1 calc(33.333% - 32px);
   box-sizing: border-box;
+  /* height: 400px; */
 }
 
 .card {
@@ -149,4 +150,28 @@ form {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* btn */
+.button-more {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #4e75ff;
+  display: block;
+  margin: 20px auto ;
+  
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.button-more:hover {
+  background: #6c8cff;
+}
+
+.button-more.is-hidden {
+  display: none;
 }

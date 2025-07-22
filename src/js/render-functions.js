@@ -3,6 +3,7 @@ import SimpleLightbox from 'simplelightbox';
 const refs = {
   gallery: document.querySelector('.gallery'),
   loader: document.querySelector('.js-loader'),
+  button: document.querySelector('.js-button-more'),
 };
 
 const lightbox = new SimpleLightbox('.gallery a', {
@@ -54,7 +55,7 @@ export const createGallery = images => {
     )
     .join('');
 
-  refs.gallery.innerHTML = createdCard;
+  refs.gallery.insertAdjacentHTML('beforeend', createdCard);
 
   lightbox.refresh();
 };
@@ -75,4 +76,12 @@ export const showLoader = () => {
 
 export const hideLoader = () => {
   refs.loader.classList.add('is-hidden');
+};
+
+export const showLoadMoreButton = () => {
+  refs.button.classList.remove('is-hidden');
+};
+
+export const hideLoadMoreButton = () => {
+  refs.button.classList.add('is-hidden');
 };
