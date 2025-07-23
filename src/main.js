@@ -64,6 +64,7 @@ const onLoadMore = async event => {
 const onFormSubmit = async event => {
   event.preventDefault();
   hideLoadMoreButton();
+  refs.button.removeEventListener('click', onLoadMore);
 
   searchedText = event.target.elements['search-text'].value.trim();
 
